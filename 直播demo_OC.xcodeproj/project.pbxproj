@@ -9,12 +9,27 @@
 /* Begin PBXBuildFile section */
 		6C27A6BF1F04CAF100998FB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6BE1F04CAF100998FB8 /* main.m */; };
 		6C27A6C21F04CAF100998FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6C11F04CAF100998FB8 /* AppDelegate.m */; };
-		6C27A6C51F04CAF100998FB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6C41F04CAF100998FB8 /* ViewController.m */; };
-		6C27A6C81F04CAF100998FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C27A6C61F04CAF100998FB8 /* Main.storyboard */; };
 		6C27A6CA1F04CAF100998FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C27A6C91F04CAF100998FB8 /* Assets.xcassets */; };
 		6C27A6CD1F04CAF100998FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C27A6CB1F04CAF100998FB8 /* LaunchScreen.storyboard */; };
 		6C27A6D81F04CAF100998FB8 /* __demo_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6D71F04CAF100998FB8 /* __demo_OCTests.m */; };
 		6C27A6E31F04CAF100998FB8 /* __demo_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6E21F04CAF100998FB8 /* __demo_OCUITests.m */; };
+		6C27A6F21F04CB7A00998FB8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6F11F04CB7A00998FB8 /* TabBarViewController.m */; };
+		6C27A6F71F04D1E500998FB8 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6F61F04D1E500998FB8 /* OneViewController.m */; };
+		6C27A6FA1F04D1FF00998FB8 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C27A6F91F04D1FF00998FB8 /* TwoViewController.m */; };
+		6C27A6FD1F04EC4D00998FB8 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A6FC1F04EC4D00998FB8 /* IJKMediaFramework.framework */; };
+		6C27A7001F04EC6800998FB8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A6FF1F04EC6800998FB8 /* AudioToolbox.framework */; };
+		6C27A7021F04EC7600998FB8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7011F04EC7600998FB8 /* AVFoundation.framework */; };
+		6C27A7041F04EC8D00998FB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7031F04EC8D00998FB8 /* CoreGraphics.framework */; };
+		6C27A7061F04ECA900998FB8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7051F04ECA900998FB8 /* CoreMedia.framework */; };
+		6C27A7081F04ECB300998FB8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7071F04ECB300998FB8 /* CoreVideo.framework */; };
+		6C27A70A1F04ECC000998FB8 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7091F04ECC000998FB8 /* libbz2.tbd */; };
+		6C27A70C1F04ECCB00998FB8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A70B1F04ECCB00998FB8 /* libz.tbd */; };
+		6C27A70E1F04ECDA00998FB8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A70D1F04ECDA00998FB8 /* MediaPlayer.framework */; };
+		6C27A7101F04ECEC00998FB8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A70F1F04ECEC00998FB8 /* MobileCoreServices.framework */; };
+		6C27A7121F04ECF600998FB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7111F04ECF600998FB8 /* QuartzCore.framework */; };
+		6C27A7141F04ED0300998FB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7131F04ED0300998FB8 /* UIKit.framework */; };
+		6C27A7161F04ED0F00998FB8 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7151F04ED0F00998FB8 /* VideoToolbox.framework */; };
+		6C27A7181F04ED3800998FB8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7171F04ED3800998FB8 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +54,6 @@
 		6C27A6BE1F04CAF100998FB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C27A6C01F04CAF100998FB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C27A6C11F04CAF100998FB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C27A6C31F04CAF100998FB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C27A6C41F04CAF100998FB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6C27A6C71F04CAF100998FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C27A6C91F04CAF100998FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C27A6CC1F04CAF100998FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C27A6CE1F04CAF100998FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +63,27 @@
 		6C27A6DE1F04CAF100998FB8 /* 直播demo_OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "直播demo_OCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C27A6E21F04CAF100998FB8 /* __demo_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __demo_OCUITests.m; sourceTree = "<group>"; };
 		6C27A6E41F04CAF100998FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C27A6F01F04CB7A00998FB8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		6C27A6F11F04CB7A00998FB8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		6C27A6F51F04D1E500998FB8 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		6C27A6F61F04D1E500998FB8 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		6C27A6F81F04D1FF00998FB8 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		6C27A6F91F04D1FF00998FB8 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		6C27A6FB1F04D27A00998FB8 /* st_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = st_Prefix.pch; sourceTree = "<group>"; };
+		6C27A6FC1F04EC4D00998FB8 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		6C27A6FF1F04EC6800998FB8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6C27A7011F04EC7600998FB8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6C27A7031F04EC8D00998FB8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6C27A7051F04ECA900998FB8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6C27A7071F04ECB300998FB8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6C27A7091F04ECC000998FB8 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		6C27A70B1F04ECCB00998FB8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6C27A70D1F04ECDA00998FB8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6C27A70F1F04ECEC00998FB8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6C27A7111F04ECF600998FB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6C27A7131F04ED0300998FB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6C27A7151F04ED0F00998FB8 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		6C27A7171F04ED3800998FB8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C27A7181F04ED3800998FB8 /* OpenGLES.framework in Frameworks */,
+				6C27A7161F04ED0F00998FB8 /* VideoToolbox.framework in Frameworks */,
+				6C27A7141F04ED0300998FB8 /* UIKit.framework in Frameworks */,
+				6C27A7121F04ECF600998FB8 /* QuartzCore.framework in Frameworks */,
+				6C27A7101F04ECEC00998FB8 /* MobileCoreServices.framework in Frameworks */,
+				6C27A70E1F04ECDA00998FB8 /* MediaPlayer.framework in Frameworks */,
+				6C27A70C1F04ECCB00998FB8 /* libz.tbd in Frameworks */,
+				6C27A70A1F04ECC000998FB8 /* libbz2.tbd in Frameworks */,
+				6C27A7081F04ECB300998FB8 /* CoreVideo.framework in Frameworks */,
+				6C27A7061F04ECA900998FB8 /* CoreMedia.framework in Frameworks */,
+				6C27A7041F04EC8D00998FB8 /* CoreGraphics.framework in Frameworks */,
+				6C27A7021F04EC7600998FB8 /* AVFoundation.framework in Frameworks */,
+				6C27A7001F04EC6800998FB8 /* AudioToolbox.framework in Frameworks */,
+				6C27A6FD1F04EC4D00998FB8 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +132,7 @@
 				6C27A6D61F04CAF100998FB8 /* 直播demo_OCTests */,
 				6C27A6E11F04CAF100998FB8 /* 直播demo_OCUITests */,
 				6C27A6BB1F04CAF100998FB8 /* Products */,
+				6C27A6FE1F04EC6800998FB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +149,18 @@
 		6C27A6BC1F04CAF100998FB8 /* 直播demo_OC */ = {
 			isa = PBXGroup;
 			children = (
+				6C27A6FC1F04EC4D00998FB8 /* IJKMediaFramework.framework */,
+				6C27A6F31F04D19E00998FB8 /* 第二个Tab */,
+				6C27A6F41F04D19E00998FB8 /* 第一个Tab */,
+				6C27A6F01F04CB7A00998FB8 /* TabBarViewController.h */,
+				6C27A6F11F04CB7A00998FB8 /* TabBarViewController.m */,
 				6C27A6C01F04CAF100998FB8 /* AppDelegate.h */,
 				6C27A6C11F04CAF100998FB8 /* AppDelegate.m */,
-				6C27A6C31F04CAF100998FB8 /* ViewController.h */,
-				6C27A6C41F04CAF100998FB8 /* ViewController.m */,
-				6C27A6C61F04CAF100998FB8 /* Main.storyboard */,
 				6C27A6C91F04CAF100998FB8 /* Assets.xcassets */,
 				6C27A6CB1F04CAF100998FB8 /* LaunchScreen.storyboard */,
 				6C27A6CE1F04CAF100998FB8 /* Info.plist */,
 				6C27A6BD1F04CAF100998FB8 /* Supporting Files */,
+				6C27A6FB1F04D27A00998FB8 /* st_Prefix.pch */,
 			);
 			path = "直播demo_OC";
 			sourceTree = "<group>";
@@ -138,6 +189,44 @@
 				6C27A6E41F04CAF100998FB8 /* Info.plist */,
 			);
 			path = "直播demo_OCUITests";
+			sourceTree = "<group>";
+		};
+		6C27A6F31F04D19E00998FB8 /* 第二个Tab */ = {
+			isa = PBXGroup;
+			children = (
+				6C27A6F81F04D1FF00998FB8 /* TwoViewController.h */,
+				6C27A6F91F04D1FF00998FB8 /* TwoViewController.m */,
+			);
+			path = "第二个Tab";
+			sourceTree = "<group>";
+		};
+		6C27A6F41F04D19E00998FB8 /* 第一个Tab */ = {
+			isa = PBXGroup;
+			children = (
+				6C27A6F51F04D1E500998FB8 /* OneViewController.h */,
+				6C27A6F61F04D1E500998FB8 /* OneViewController.m */,
+			);
+			path = "第一个Tab";
+			sourceTree = "<group>";
+		};
+		6C27A6FE1F04EC6800998FB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C27A7171F04ED3800998FB8 /* OpenGLES.framework */,
+				6C27A7151F04ED0F00998FB8 /* VideoToolbox.framework */,
+				6C27A7131F04ED0300998FB8 /* UIKit.framework */,
+				6C27A7111F04ECF600998FB8 /* QuartzCore.framework */,
+				6C27A70F1F04ECEC00998FB8 /* MobileCoreServices.framework */,
+				6C27A70D1F04ECDA00998FB8 /* MediaPlayer.framework */,
+				6C27A70B1F04ECCB00998FB8 /* libz.tbd */,
+				6C27A7091F04ECC000998FB8 /* libbz2.tbd */,
+				6C27A7071F04ECB300998FB8 /* CoreVideo.framework */,
+				6C27A7051F04ECA900998FB8 /* CoreMedia.framework */,
+				6C27A7031F04EC8D00998FB8 /* CoreGraphics.framework */,
+				6C27A7011F04EC7600998FB8 /* AVFoundation.framework */,
+				6C27A6FF1F04EC6800998FB8 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +340,6 @@
 			files = (
 				6C27A6CD1F04CAF100998FB8 /* LaunchScreen.storyboard in Resources */,
 				6C27A6CA1F04CAF100998FB8 /* Assets.xcassets in Resources */,
-				6C27A6C81F04CAF100998FB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C27A6C51F04CAF100998FB8 /* ViewController.m in Sources */,
+				6C27A6F21F04CB7A00998FB8 /* TabBarViewController.m in Sources */,
 				6C27A6C21F04CAF100998FB8 /* AppDelegate.m in Sources */,
 				6C27A6BF1F04CAF100998FB8 /* main.m in Sources */,
+				6C27A6FA1F04D1FF00998FB8 /* TwoViewController.m in Sources */,
+				6C27A6F71F04D1E500998FB8 /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +404,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C27A6C61F04CAF100998FB8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C27A6C71F04CAF100998FB8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6C27A6CB1F04CAF100998FB8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,6 +512,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U4629HP3VA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/直播demo_OC",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/直播demo_OC/st_Prefix.pch";
 				INFOPLIST_FILE = "直播demo_OC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.--demo-OC";
@@ -442,6 +530,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U4629HP3VA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/直播demo_OC",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/直播demo_OC/st_Prefix.pch";
 				INFOPLIST_FILE = "直播demo_OC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.--demo-OC";
