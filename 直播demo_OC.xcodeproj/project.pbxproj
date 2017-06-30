@@ -33,6 +33,8 @@
 		6CF3D9641F04F755004E0EF8 /* OneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9631F04F755004E0EF8 /* OneModel.m */; };
 		6CF3D9671F04F78F004E0EF8 /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9661F04F78F004E0EF8 /* OneTableViewCell.m */; };
 		6CF3D96A1F04F7BF004E0EF8 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9691F04F7BF004E0EF8 /* UserModel.m */; };
+		6CF3D9701F062BD8004E0EF8 /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6CF3D96F1F062BD8004E0EF8 /* start.mp3 */; };
+		6CF3D9731F062C07004E0EF8 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9721F062C07004E0EF8 /* NetWorkManager.m */; };
 		F07ABC6DD6ADCF2BF601D086 /* Pods___demo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EC3CC3AD10728F5DB8A3EE /* Pods___demo_OC.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,9 @@
 		6CF3D9661F04F78F004E0EF8 /* OneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTableViewCell.m; sourceTree = "<group>"; };
 		6CF3D9681F04F7BF004E0EF8 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		6CF3D9691F04F7BF004E0EF8 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		6CF3D96F1F062BD8004E0EF8 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		6CF3D9711F062C07004E0EF8 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		6CF3D9721F062C07004E0EF8 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		A0EC3CC3AD10728F5DB8A3EE /* Pods___demo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___demo_OC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB65B9E726054317B7D9A875 /* Pods-直播demo_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-直播demo_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-直播demo_OC/Pods-直播demo_OC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +169,7 @@
 		6C27A6BC1F04CAF100998FB8 /* 直播demo_OC */ = {
 			isa = PBXGroup;
 			children = (
+				6CF3D96E1F062BD8004E0EF8 /* tools */,
 				6C27A6FC1F04EC4D00998FB8 /* IJKMediaFramework.framework */,
 				6C27A6F31F04D19E00998FB8 /* 第二个Tab */,
 				6C27A6F41F04D19E00998FB8 /* 第一个Tab */,
@@ -174,8 +180,8 @@
 				6C27A6C91F04CAF100998FB8 /* Assets.xcassets */,
 				6C27A6CB1F04CAF100998FB8 /* LaunchScreen.storyboard */,
 				6C27A6CE1F04CAF100998FB8 /* Info.plist */,
-				6C27A6BD1F04CAF100998FB8 /* Supporting Files */,
 				6C27A6FB1F04D27A00998FB8 /* st_Prefix.pch */,
+				6C27A6BD1F04CAF100998FB8 /* Supporting Files */,
 			);
 			path = "直播demo_OC";
 			sourceTree = "<group>";
@@ -249,6 +255,16 @@
 				A0EC3CC3AD10728F5DB8A3EE /* Pods___demo_OC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CF3D96E1F062BD8004E0EF8 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				6CF3D96F1F062BD8004E0EF8 /* start.mp3 */,
+				6CF3D9711F062C07004E0EF8 /* NetWorkManager.h */,
+				6CF3D9721F062C07004E0EF8 /* NetWorkManager.m */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 		9221FBCA705E0247D9843B34 /* Pods */ = {
@@ -373,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C27A6CD1F04CAF100998FB8 /* LaunchScreen.storyboard in Resources */,
+				6CF3D9701F062BD8004E0EF8 /* start.mp3 in Resources */,
 				6C27A6CA1F04CAF100998FB8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +479,7 @@
 				6C27A6C21F04CAF100998FB8 /* AppDelegate.m in Sources */,
 				6C27A6BF1F04CAF100998FB8 /* main.m in Sources */,
 				6C27A6FA1F04D1FF00998FB8 /* TwoViewController.m in Sources */,
+				6CF3D9731F062C07004E0EF8 /* NetWorkManager.m in Sources */,
 				6CF3D96A1F04F7BF004E0EF8 /* UserModel.m in Sources */,
 				6C27A6F71F04D1E500998FB8 /* OneViewController.m in Sources */,
 			);

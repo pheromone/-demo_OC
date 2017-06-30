@@ -7,17 +7,93 @@
 //
 
 #import "OneTableViewCell.h"
+@interface OneTableViewCell ()
+@property (nonatomic,strong)UIImageView *userimageView;
+@property (nonatomic,strong)UILabel *nameLabel;
+@property (nonatomic,strong)UILabel *cityLabel;
+@property (nonatomic,strong)UIImageView *userBigImg;
+
+
+@end
 
 @implementation OneTableViewCell
+//头像
+-(UIImageView *)userimageView{
+    if(!_userimageView){
+        self.userimageView = [[UIImageView alloc]initWithFrame:CGRectZero];
+        self.userimageView.image = [UIImage imageNamed:@"money"];
+        self.userimageView.layer.masksToBounds = YES;
+        self.userimageView.layer.cornerRadius = 6;
+    }
+    return _userimageView;
+}
+//名字
+-(UILabel *)nameLabel{
+    if(!_nameLabel){
+        self.nameLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+        self.nameLabel.backgroundColor = [UIColor redColor];
+    }
+    return _nameLabel;
+}
+//城市
+-(UILabel *)cityLabel{
+    if(!_cityLabel){
+        self.cityLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+        self.cityLabel.backgroundColor = [UIColor yellowColor];
+    }
+    return _cityLabel;
+}
+//大图
+-(UIImageView *)userBigImg{
+    if(!_userBigImg){
+        self.userBigImg = [[UIImageView alloc]initWithFrame:CGRectZero];
+        self.userBigImg.backgroundColor = [UIColor blackColor];
+    }
+    return _userBigImg;
+}
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    [self setupUI];
+    [self addCons];
+    return self;
+}
+
+-(void)setupUI{
+    [self.contentView addSubview:self.userimageView];
+    [self.contentView addSubview:self.nameLabel];
+    [self.contentView addSubview:self.cityLabel];
+    [self.contentView addSubview:self.userBigImg];
+}
+
+-(void)addCons{
+    [self.userimageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(@5);
+        make.top.equalTo(@5);
+        make.width.height.equalTo(@60);
+    }];
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@(SCREEN_WIDTH-65));
+        make.height.equalTo(@30);
+        make.leftMargin.equalTo(self.userimageView.mas_right).offset(10);
+        make.top.equalTo(@5);
+    }];
+    [self.cityLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@(SCREEN_WIDTH-65));
+        make.height.equalTo(@30);
+        make.leftMargin.equalTo(self.userimageView.mas_right).offset(10);
+        make.topMargin.equalTo(self.nameLabel.mas_bottom).offset(5);
+    }];
+    [self.userBigImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@(SCREEN_WIDTH));
+        make.height.equalTo(@230);
+        make.topMargin.equalTo(_userimageView.mas_bottom).offset(10);
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

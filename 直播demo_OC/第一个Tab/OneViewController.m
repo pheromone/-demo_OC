@@ -11,20 +11,11 @@
 @interface OneViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView  *tableView;
-@property(nonatomic,strong)UIButton  *btn;
 
 @end
 
 @implementation OneViewController
 static NSString * cellIdentifier = @"oneCell";
-
-- (UIButton *)btn {
-    if(!_btn){
-        self.btn = [[UIButton alloc]init];
-        [self.view addSubview:self.btn];
-    }
-    return _btn;
-}
 
 - (UITableView *)tableView {
     if(!_tableView){
@@ -36,16 +27,26 @@ static NSString * cellIdentifier = @"oneCell";
     return _tableView;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.rowHeight = 300;
     [self.view addSubview:self.tableView];
-   
-    [self addMasonry];
+    [self addCons];
+    
+    [self loadData];
     // Do any additional setup after loading the view.
 }
 
-- (void)addMasonry {
+- (void)loadData{
+    [[NetWorkManager sharedManager]requestData:nil path:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1" success:^(id responseObject) {
+        NSLog(@"OK%@",responseObject);
+    } failure:^(id error) {
+        NSLog(@"网络请求出错了%@",error);
+    }];
+}
+
+- (void)addCons {
 
 }
 

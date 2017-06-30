@@ -6,10 +6,17 @@
 //  Copyright © 2017年 Shaoting Zhou. All rights reserved.
 //
 
+#define SCREEN_WIDTH                    ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT                   ([UIScreen mainScreen].bounds.size.height)
+
+
+
 #import "TabBarViewController.h"
 
 #import "OneViewController.h"
 #import "TwoViewController.h"
+
+#import "NetWorkManager.h"
 
 #import "OneTableViewCell.h"
 #import "OneModel.h"
@@ -18,3 +25,5 @@
 #import "Masonry.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "AFNetworking.h"
+
+

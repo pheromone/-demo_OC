@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface OneModel : NSObject
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *stream_addr;
++ (instancetype)detailImgWithDict:(NSDictionary *)dict;
 
 @end
