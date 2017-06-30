@@ -8,18 +8,58 @@
 
 #import "OneViewController.h"
 
-@interface OneViewController ()
+@interface OneViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property(nonatomic,strong)UITableView  *tableView;
+@property(nonatomic,strong)UIButton  *btn;
 
 @end
 
 @implementation OneViewController
+static NSString * cellIdentifier = @"oneCell";
+
+- (UIButton *)btn {
+    if(!_btn){
+        self.btn = [[UIButton alloc]init];
+        [self.view addSubview:self.btn];
+    }
+    return _btn;
+}
+
+- (UITableView *)tableView {
+    if(!_tableView){
+        self.tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        [self.tableView registerClass:[OneTableViewCell class] forCellReuseIdentifier:cellIdentifier];
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
-
+    [self.view addSubview:self.tableView];
+   
+    [self addMasonry];
     // Do any additional setup after loading the view.
 }
+
+- (void)addMasonry {
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    OneTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
