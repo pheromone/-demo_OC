@@ -85,10 +85,16 @@
 
 -(void)setOneModel:(OneModel *)oneModel{
     self.nameLabel.text = oneModel.creator.nick;
-    self.cityLabel.text = oneModel.city;
+    NSString * city = oneModel.city;
+    if(city.length > 0) {
+        NSMutableAttributedString * newCity = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"来自:%@",city]];
+        [newCity addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 3)];
+        self.cityLabel.attributedText = newCity;
+    }
     [self.userBigImg sd_setImageWithURL:[NSURL URLWithString:oneModel.creator.portrait]];
     [self.userimageView sd_setImageWithURL:[NSURL URLWithString:oneModel.creator.portrait]];
 }
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

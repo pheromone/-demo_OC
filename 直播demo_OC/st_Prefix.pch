@@ -5,23 +5,28 @@
 //  Created by Shaoting Zhou on 2017/6/29.
 //  Copyright © 2017年 Shaoting Zhou. All rights reserved.
 //
-
+// 屏幕宽 高
 #define SCREEN_WIDTH                    ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT                   ([UIScreen mainScreen].bounds.size.height)
 
 
-
+//tabBar
 #import "TabBarViewController.h"
 
+//TAB1
 #import "OneViewController.h"
-#import "TwoViewController.h"
-
-#import "NetWorkManager.h"
-
+#import "VideoViewController.h"
 #import "OneTableViewCell.h"
 #import "OneModel.h"
 #import "UserModel.h"
 
+//TAB2
+#import "TwoViewController.h"
+
+//工具类
+#import "NetWorkManager.h"
+
+//第三方库
 #import "Masonry.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "AFNetworking.h"

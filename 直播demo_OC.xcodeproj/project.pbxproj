@@ -30,6 +30,7 @@
 		6C27A7141F04ED0300998FB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7131F04ED0300998FB8 /* UIKit.framework */; };
 		6C27A7161F04ED0F00998FB8 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7151F04ED0F00998FB8 /* VideoToolbox.framework */; };
 		6C27A7181F04ED3800998FB8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C27A7171F04ED3800998FB8 /* OpenGLES.framework */; };
+		6C9C0EE71F0A106600F9461A /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C0EE61F0A106600F9461A /* VideoViewController.m */; };
 		6CF3D9641F04F755004E0EF8 /* OneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9631F04F755004E0EF8 /* OneModel.m */; };
 		6CF3D9671F04F78F004E0EF8 /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9661F04F78F004E0EF8 /* OneTableViewCell.m */; };
 		6CF3D96A1F04F7BF004E0EF8 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D9691F04F7BF004E0EF8 /* UserModel.m */; };
@@ -91,6 +92,8 @@
 		6C27A7131F04ED0300998FB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6C27A7151F04ED0F00998FB8 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		6C27A7171F04ED3800998FB8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6C9C0EE51F0A106600F9461A /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		6C9C0EE61F0A106600F9461A /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		6CF3D9621F04F754004E0EF8 /* OneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneModel.h; sourceTree = "<group>"; };
 		6CF3D9631F04F755004E0EF8 /* OneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneModel.m; sourceTree = "<group>"; };
 		6CF3D9651F04F78F004E0EF8 /* OneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTableViewCell.h; sourceTree = "<group>"; };
@@ -100,7 +103,7 @@
 		6CF3D96F1F062BD8004E0EF8 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
 		6CF3D9711F062C07004E0EF8 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
 		6CF3D9721F062C07004E0EF8 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
-		A0EC3CC3AD10728F5DB8A3EE /* Pods___demo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods___demo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0EC3CC3AD10728F5DB8A3EE /* Pods___demo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___demo_OC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB65B9E726054317B7D9A875 /* Pods-直播demo_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-直播demo_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-直播demo_OC/Pods-直播demo_OC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +235,8 @@
 				6CF3D9661F04F78F004E0EF8 /* OneTableViewCell.m */,
 				6CF3D9681F04F7BF004E0EF8 /* UserModel.h */,
 				6CF3D9691F04F7BF004E0EF8 /* UserModel.m */,
+				6C9C0EE51F0A106600F9461A /* VideoViewController.h */,
+				6C9C0EE61F0A106600F9461A /* VideoViewController.m */,
 			);
 			path = "第一个Tab";
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9C0EE71F0A106600F9461A /* VideoViewController.m in Sources */,
 				6CF3D9641F04F755004E0EF8 /* OneModel.m in Sources */,
 				6C27A6F21F04CB7A00998FB8 /* TabBarViewController.m in Sources */,
 				6CF3D9671F04F78F004E0EF8 /* OneTableViewCell.m in Sources */,

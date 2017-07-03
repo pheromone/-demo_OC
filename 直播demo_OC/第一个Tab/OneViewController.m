@@ -10,7 +10,7 @@
 
 @interface OneViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong) NSMutableArray *dataArray;
-
+@property (nonatomic , strong) OneModel *oneModel;
 @property(nonatomic,strong)UITableView  *tableView;
 
 @end
@@ -66,6 +66,13 @@ static NSString * cellIdentifier = @"oneCell";
 //    NSLog(@"%@",self.dataArray);
     cell.oneModel = self.dataArray[indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    VideoViewController * video = [[VideoViewController alloc]init];
+    self.oneModel = self.dataArray[indexPath.row];
+    NSLog(@"%@",_oneModel.stream_addr);
+    [self presentViewController:video animated:YES completion:nil] ;
 }
 
 
