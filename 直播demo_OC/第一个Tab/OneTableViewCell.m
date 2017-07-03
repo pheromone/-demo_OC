@@ -8,11 +8,6 @@
 
 #import "OneTableViewCell.h"
 @interface OneTableViewCell ()
-@property (nonatomic,strong)UIImageView *userimageView;
-@property (nonatomic,strong)UILabel *nameLabel;
-@property (nonatomic,strong)UILabel *cityLabel;
-@property (nonatomic,strong)UIImageView *userBigImg;
-
 
 @end
 
@@ -31,7 +26,6 @@
 -(UILabel *)nameLabel{
     if(!_nameLabel){
         self.nameLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        self.nameLabel.backgroundColor = [UIColor redColor];
     }
     return _nameLabel;
 }
@@ -39,7 +33,6 @@
 -(UILabel *)cityLabel{
     if(!_cityLabel){
         self.cityLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        self.cityLabel.backgroundColor = [UIColor yellowColor];
     }
     return _cityLabel;
 }
@@ -47,7 +40,6 @@
 -(UIImageView *)userBigImg{
     if(!_userBigImg){
         self.userBigImg = [[UIImageView alloc]initWithFrame:CGRectZero];
-        self.userBigImg.backgroundColor = [UIColor blackColor];
     }
     return _userBigImg;
 }
@@ -89,6 +81,13 @@
         make.height.equalTo(@230);
         make.topMargin.equalTo(_userimageView.mas_bottom).offset(10);
     }];
+}
+
+-(void)setOneModel:(OneModel *)oneModel{
+    self.nameLabel.text = oneModel.creator.nick;
+    self.cityLabel.text = oneModel.city;
+    [self.userBigImg sd_setImageWithURL:[NSURL URLWithString:oneModel.creator.portrait]];
+    [self.userimageView sd_setImageWithURL:[NSURL URLWithString:oneModel.creator.portrait]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

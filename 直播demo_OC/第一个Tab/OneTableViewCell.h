@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class OneModel;
 @interface OneTableViewCell : UITableViewCell
-
+@property (nonatomic , strong) OneModel *oneModel;
+@property (nonatomic,strong)UIImageView *userimageView;
+@property (nonatomic,strong)UILabel *nameLabel;
+@property (nonatomic,strong)UILabel *cityLabel;
+@property (nonatomic,strong)UIImageView *userBigImg;
 @end

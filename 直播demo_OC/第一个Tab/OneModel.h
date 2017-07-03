@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class UserModel;
 
 @interface OneModel : NSObject
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *city;
-@property (nonatomic, copy) NSString *stream_addr;
-+ (instancetype)detailImgWithDict:(NSDictionary *)dict;
-
+@property (nonatomic , strong) UserModel *creator; //用户信息模型
+@property (nonatomic, copy) NSString *name; //标签
+@property (nonatomic, copy) NSString *city;//所在城市
+@property (nonatomic, copy) NSString *stream_addr;//视频地址
 @end

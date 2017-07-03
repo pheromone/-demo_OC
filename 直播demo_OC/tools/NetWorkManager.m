@@ -39,6 +39,7 @@ static id _instance;
             failure:(void(^)(id error))failure{
 
     AFHTTPSessionManager * mgr = [AFHTTPSessionManager manager];
+    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     [mgr GET:path parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

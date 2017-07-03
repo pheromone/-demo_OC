@@ -9,6 +9,7 @@
 #import "OneViewController.h"
 
 @interface OneViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic , strong) NSMutableArray *dataArray;
 
 @property(nonatomic,strong)UITableView  *tableView;
 
@@ -16,6 +17,14 @@
 
 @implementation OneViewController
 static NSString * cellIdentifier = @"oneCell";
+
+- (NSMutableArray *)totalArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 - (UITableView *)tableView {
     if(!_tableView){
@@ -29,35 +38,33 @@ static NSString * cellIdentifier = @"oneCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tableView.rowHeight = 300;
     [self.view addSubview:self.tableView];
-    [self addCons];
-    
     [self loadData];
     // Do any additional setup after loading the view.
 }
 
 - (void)loadData{
+    __weak typeof(self) weakself = self;
     [[NetWorkManager sharedManager]requestData:nil path:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1" success:^(id responseObject) {
-        NSLog(@"OK%@",responseObject);
+        weakself.dataArray = [OneModel mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
+        [weakself.tableView reloadData];
+//        NSLog(@"OK%@",responseObject);
     } failure:^(id error) {
         NSLog(@"网络请求出错了%@",error);
     }];
 }
 
-- (void)addCons {
-
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OneTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
+//    NSLog(@"%@",self.dataArray);
+    cell.oneModel = self.dataArray[indexPath.row];
     return cell;
 }
 

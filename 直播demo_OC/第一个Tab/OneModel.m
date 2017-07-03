@@ -11,12 +11,4 @@
 @implementation OneModel
 
 
-+ (instancetype)detailImgWithDict:(NSDictionary *)dict{
-    OneModel * oneModel = [[self alloc]init];
-    oneModel.name = dict[@"name"];
-    oneModel.city = dict[@"city"];
-    oneModel.stream_addr = dict[@"stream_addr"];
-    return oneModel;
-}
-
 @end

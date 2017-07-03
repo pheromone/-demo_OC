@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface UserModel : NSObject
 
+@property (nonatomic, copy) NSString *nick; //名字
+@property (nonatomic, copy) NSString *portrait; //大图
 @end
