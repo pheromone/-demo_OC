@@ -71,7 +71,8 @@ static NSString * cellIdentifier = @"oneCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     VideoViewController * video = [[VideoViewController alloc]init];
     self.oneModel = self.dataArray[indexPath.row];
-    NSLog(@"%@",_oneModel.stream_addr);
+    video.stream_addr = _oneModel.stream_addr;
+    video.portrait = _oneModel.creator.portrait;
     [self presentViewController:video animated:YES completion:nil] ;
 }
 

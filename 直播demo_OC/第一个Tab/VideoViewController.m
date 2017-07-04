@@ -9,6 +9,7 @@
 #import "VideoViewController.h"
 
 @interface VideoViewController ()
+@property(nonatomic,strong)IJKFFMoviePlayerController *ijkLiveVeiw;
 
 @end
 
@@ -49,20 +50,34 @@
     [super viewDidLoad];
     [self addSubView];
     [self addCons];
+    NSLog(@"000%@",self.portrait);
+    NSLog(@"111%@",self.stream_addr);
+
     // Do any additional setup after loading the view.
 }
 - (void)addSubView{
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gift"]];
+    //背景虚化
+    UIImageView *imageView = [[UIImageView alloc] init];
     imageView.frame = [UIScreen mainScreen].bounds;
-//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-//     UIVisualEffectView *visual = [[UIVisualEffectView alloc] initWithEffect:blur];
-//    visual.alpha = 1.0f;
-//    visual.frame = imageView.bounds;
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.portrait]];
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+     UIVisualEffectView *visual = [[UIVisualEffectView alloc] initWithEffect:blur];
+    visual.frame = imageView.bounds;
+    visual.alpha  = 0.8f;
+    [imageView addSubview:visual];
     [self.view addSubview:imageView];
     
-     [self.view addSubview:self.backBtn];
-     [self.view addSubview:self.heartBtn];
-     [self.view addSubview:self.giftBtn];
+    // 拉流地址
+    NSURL *url = [NSURL URLWithString:_stream_addr];
+    
+    self.ijkLiveVeiw = [[IJKFFMoviePlayerController alloc]initWithContentURL:url withOptions:nil];
+    self.ijkLiveVeiw.view.frame = [UIScreen mainScreen].bounds;
+    [self.ijkLiveVeiw prepareToPlay];
+    
+    [self.view addSubview:_ijkLiveVeiw.view];
+    [self.view insertSubview:self.backBtn aboveSubview: self.ijkLiveVeiw.view];
+    [self.view insertSubview:self.heartBtn aboveSubview: self.ijkLiveVeiw.view];
+    [self.view insertSubview:self.giftBtn aboveSubview: self.ijkLiveVeiw.view];
 }
 - (void)addCons{
     [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -87,7 +102,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:YES];
+    if (_ijkLiveVeiw) {
+        [_ijkLiveVeiw pause];
+        [_ijkLiveVeiw stop];
+        [_ijkLiveVeiw shutdown];
+    }
+}
 /*
 #pragma mark - Navigation
 

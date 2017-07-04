@@ -19,6 +19,8 @@
 #import "OneTableViewCell.h"
 #import "OneModel.h"
 #import "UserModel.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
+
 
 //TAB2
 #import "TwoViewController.h"
