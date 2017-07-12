@@ -7,12 +7,13 @@
 //
 
 #import "OneViewController.h"
-
-@interface OneViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import <AVFoundation/AVFoundation.h>
+@interface OneViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic , strong) NSMutableArray *dataArray;
 @property (nonatomic , strong) OneModel *oneModel;
 @property(nonatomic,strong)UITableView  *tableView;
-
+@property(nonatomic,strong)AVAudioPlayer   *player ;
+@property(nonatomic,assign)BOOL isAnimation;
 @end
 
 @implementation OneViewController
@@ -69,6 +70,13 @@ static NSString * cellIdentifier = @"oneCell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString * path = [NSBundle.mainBundle pathForResource:@"start" ofType:@"mp3"];
+    NSData * data = [[NSData alloc]initWithContentsOfFile:path];
+    self.player = [[AVAudioPlayer alloc]initWithData:data error:nil];
+    [self.player updateMeters];
+    [self.player prepareToPlay];
+    [self.player play];
+    
     VideoViewController * video = [[VideoViewController alloc]init];
     self.oneModel = self.dataArray[indexPath.row];
     video.stream_addr = _oneModel.stream_addr;
@@ -76,6 +84,32 @@ static NSString * cellIdentifier = @"oneCell";
     [self presentViewController:video animated:YES completion:nil] ;
 }
 
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    static CGFloat y = 0;
+    if (scrollView.contentOffset.y > y)
+    {
+        self.isAnimation = YES;
+    }
+    else
+    {
+        self.isAnimation = NO;
+    }
+    y = scrollView.contentOffset.y;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (!_isAnimation)
+    {
+        return;
+    }
+    CGAffineTransform tran = CGAffineTransformMakeTranslation(cell.transform.tx, cell.transform.ty + 70);
+    cell.transform = tran;
+    [UIView animateWithDuration:0.8 animations:^{
+        cell.transform = CGAffineTransformMakeTranslation(cell.transform.tx, cell.transform.ty - 70);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

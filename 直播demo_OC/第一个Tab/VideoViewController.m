@@ -28,7 +28,7 @@
     if(!_heartBtn){
         self.heartBtn = [[UIButton alloc]initWithFrame:CGRectZero];
         [self.heartBtn setImage:[UIImage imageNamed:@"点赞"] forState:UIControlStateNormal];
-        [self.heartBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.heartBtn addTarget:self action:@selector(heartAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _heartBtn;
 }
@@ -37,13 +37,61 @@
     if(!_giftBtn){
         self.giftBtn = [[UIButton alloc]initWithFrame:CGRectZero];
         [self.giftBtn setImage:[UIImage imageNamed:@"gift"] forState:UIControlStateNormal];
-        [self.giftBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.giftBtn addTarget:self action:@selector(giftAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _giftBtn;
 }
 
+//返回按钮事件
 - (void)backAction {
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+//点击爱心事件
+-(void)heartAction:(UIButton *)btn{
+    //爱心动画
+    DMHeartFlyView * heart = [[DMHeartFlyView alloc]initWithFrame:CGRectMake(0, 0, 48, 48)];
+    heart.center = CGPointMake(self.heartBtn.frame.origin.x, self.heartBtn.frame.origin.y);
+    [self.view insertSubview:heart aboveSubview:self.ijkLiveVeiw.view];
+    [heart animateInView:self.view];
+    
+    
+    //按钮大小点击动画
+    CAKeyframeAnimation *  btnAnime = [[CAKeyframeAnimation alloc]init];
+    btnAnime.keyPath = @"transform.scale";
+    btnAnime.values =      @[@1.0, @0.7, @0.5, @0.3, @0.5, @0.7, @1.0, @1.2, @1.4, @1.2, @1.0];
+    btnAnime.keyTimes = @[@0.0,@0.1, @0.2, @0.3, @0.4, @0.5, @0.6, @0.7, @0.8, @0.9, @1.0 ];
+    btnAnime.duration = 0.2;
+    
+    [btn.layer addAnimation:btnAnime forKey:@"SHOW"];
+}
+
+//点击礼物动画
+-(void)giftAction:(UIButton *)btn{
+   //跑车动画
+    int duration = 3.0;
+    CGFloat carWidth = 250;
+    CGFloat carHeight = 125;
+    UIImageView * car = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"porsche"]];
+    car.frame = CGRectMake(0, 0, 0, 0);
+    [self.view insertSubview:car aboveSubview:self.ijkLiveVeiw.view];
+    
+    [UIView animateWithDuration:duration animations:^{
+        car.frame = CGRectMake(self.view.center.x - carWidth/2, self.view.center.x - carHeight/2, carWidth, carHeight);
+    } completion:^(BOOL finished) {
+        [car removeFromSuperview];
+    }];
+    
+    //烟花特效动画
+    CAEmitterLayer * layerFw = [[CAEmitterLayer alloc]init];
+    [self.view.layer addSublayer:layerFw];
+    [[[emmitParticles alloc]init] emmitParticlesFrom:btn.center emitter:layerFw in:self.view];
+    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 5*NSEC_PER_SEC);
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        [layerFw removeFromSuperlayer];
+    });
+    
+    
 }
 
 - (void)viewDidLoad {
@@ -102,8 +150,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:YES];
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
     if (_ijkLiveVeiw) {
         [_ijkLiveVeiw pause];
         [_ijkLiveVeiw stop];

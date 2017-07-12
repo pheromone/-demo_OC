@@ -20,7 +20,8 @@
 #import "OneModel.h"
 #import "UserModel.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
-
+#import "DMHeartFlyView.h"
+#import "直播demo_OC-Swift.h"
 
 //TAB2
 #import "TwoViewController.h"
